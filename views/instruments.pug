@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Instruments
+        .cards
+        each instrument in data
+            .card
+                h2.card__name #{instrument.properties.name} - #{instrument.properties.family}
+                p.card__email #{instrument.properties.usual_style}
