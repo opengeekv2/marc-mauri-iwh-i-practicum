@@ -7,8 +7,13 @@ html
     body
         h1 Instruments
         a(href="/update-cobj") Add to this table
-        .cards
-        each instrument in data
-            .card
-                h2.card__name #{instrument.properties.name} - #{instrument.properties.family}
-                p.card__email #{instrument.properties.usual_style}
+        table
+            tr
+                th Name
+                th Family
+                th Usual Style
+            each instrument in data
+                tr
+                    td #{instrument.properties.name}
+                    td #{instrument.properties.family}
+                    td #{instrument.properties.usual_style}
